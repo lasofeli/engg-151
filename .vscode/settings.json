@@ -1,3 +1,10 @@
 {
-    "C_Cpp.default.compilerPath": "/usr/bin/g++"
+    "C_Cpp.default.compilerPath": "cl.exe",
+    "files.associations": {
+        "xstring": "cpp",
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "vector": "cpp",
+        "string": "cpp"
+    }
 }
