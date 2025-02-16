@@ -3,6 +3,13 @@
 // Sonon, Hugh
 // ENGG 151.01 - Project 1
 
+/*
+IMPORTANT:
+Code is not yet formatted properly
+- the 70 char limit (idk if he still does this)
+- the use 'new' rule
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -39,137 +46,192 @@ class engg151Signal
     // returns a pointer to an array of double containing the signal values
 };
 
-bool parseFileInput(string filepath, engg151Signal signalEx)
+bool parseFileInput(string filepath)
 {
-  while (true)
+  bool fileInputSuccessful = false;
+
+  // Needed to verify that file exists. Also tries the .txt addition.
+  ifstream file(filepath.c_str());
+  if (!file.good())
   {
-    bool fileInputSuccessful = false;
-    bool filepathChanged = false;
-
-    while (!fileInputSuccessful)
+    string changedFilepath = filepath += ".txt";
+    ifstream file(changedFilepath.c_str());
+    if (!file.good())
     {
-      ifstream file(filepath.c_str());
-      if (!file.good())
-      {
-        string changedFilepath = filepath += ".txt";
-        ifstream file(changedFilepath.c_str());
-        if (!file.good())
-        {
-          cout << "Something seems to be wrong." << endl;
-          cout << "Appended .txt file and continuing..." << endl;
-          filepathChanged = true;
-        } else
-        {
-          cout << "Something seems to be wrong with: " << filepath << endl;
-          cout << "Maybe try again?" << endl;
-          return false;
-        }
-      }
-
-      vector<double> varVector;
-
-      double a, b;
-      string c, d;
-
-      int index;
-      double signal1, signal2;
-
-      // cout << "Test" << endl;
-      int firstLineErrors = 0;
-      bool firstLine = false;
-      bool indexPresent = false;
-      string s;
-      vector<string> v;
-
-      int i = 0;
-      int n = 0;
-      for (string line; getline(file, line); )
-      {
-        istringstream iss(line);
-        if (n == 0) // Needed to check if first line has two or one numbers.
-        {
-          while (getline(iss, s, ' '))
-          {
-              v.push_back(s);
-          }
-          
-          while (i < 2)
-          {
-              istringstream iss(v.at(i));
-              if (iss >> signal1)
-              {
-                  if (!isdigit(v.at(i).back()))
-                  {
-                      firstLineErrors = 1;
-                  }
-                  if (i == 0)
-                  {
-                      signal2 = signal1;
-                  } else {
-                      istringstream iss(v.at(0));
-                      if (!(iss >> index))
-                      {
-                          firstLineErrors = 2;
-                          break;
-                      }
-                      indexPresent = true;
-                      char * p;
-                      strtol(v.at(0).c_str(), &p, 10);
-
-                      if (*p != 0)
-                      {
-                          firstLineErrors = 1;
-                      }
-                  }
-              } else if (i == 0)
-              {
-                  firstLineErrors = 2;
-                  break;
-              } else
-              {
-                  index = 0;
-                  break;
-              }
-              i++;
-          }
-          if (firstLineErrors == 2)
-          {
-            cout << "Serious error detected. Aborting program." << endl;
-            break;
-          } else if (firstLineErrors == 1)
-          {
-            cout << "Error detected on the first line. Approximate input used." << endl;
-          }
-
-          if (indexPresent == true)
-          {
-            cout << "Index: " << index << ", signal: " << signal1 << endl;
-          } else
-          {
-              cout << "Signal: " << signal2 << endl;
-          }
-        }
-        else
-        {
-          if (!(iss >> b))
-          {
-            cout << "Error detected at line " << n+1 << endl;
-            continue;
-          }
-          varVector.push_back(b);
-        }
-        
-        if (n != 0)
-        {
-          varVector.push_back(a);
-        } else
-        {
-          varVector.push_back(b);
-        }
-      }
-      
+      cout << "Something seems to be wrong." << endl;
+      cout << "Appended .txt file and continuing..." << endl;
+    } else
+    {
+      cout << "Something seems to be wrong with: " << filepath << endl;
+      cout << "Maybe try again?" << endl;
+      return false;
     }
   }
+
+  vector<double> varVector; // For storing signal
+
+  double a, b;
+  string c, d;
+
+  int index;
+  double currentlyTested, tempStore;
+  string discardedString;
+  double signal1, signal2; 
+
+  // Storing error status is useful to make sure error message
+  // only displays once per line
+  bool errorPresent = false;
+  bool firstLine = false;
+  bool indexPresent = false;
+  string s;
+  vector<string> v;
+
+  int n = 0;
+  // Iterator for first line validator
+  int i = 0;
+  for (string line; getline(file, line); )
+  {
+    istringstream iss_line(line);
+    if (n == 0)
+    {
+      // Split the string up so that we can extract
+      // only the first two. Done to disregard
+      // rest of the potential comments
+
+      // Conversion to string is done to allow comparison
+      // before and after iss.
+      while (getline(iss_line, s, ' '))
+      {
+          v.push_back(s);
+      }
+      
+      // Signal file format is that only the first two
+      // might matter, so rest is discarded.
+      // Thus, loop should terminate either when it evaluates
+      // two elements or if it's evaluated the lone element in
+      // a string that has only one element, whichever comes first.
+      for (int i = 0; i < 2 || i > v.size(); i++)
+      {
+        // Following two lines check if the string
+        // currently being tested
+        // can be processed into a double.
+        istringstream iss_word(v.at(i));
+        if (iss_word >> currentlyTested) // Code for if it can
+        {
+          // Since the fail-bit for istringstream does
+          // not trip if it discards trailing letters,
+          // this has to be checked manually.
+
+          if (!((iss_word >> currentlyTested >> std::ws).eof()))
+          {
+            errorPresent = true;
+          }
+          
+          // Simple way of checking is to see if there are
+          // bits that were not taken by the "currentlyTested"
+          if (v.size() > 1 && (discardedString != v.at(i+1) || discardedString == ""))
+          {
+            errorPresent = true;
+          }
+          if (discardedString != v.at(i+1))
+          {
+            errorPresent = true;
+          }
+
+          /*
+          // At this point, it is still unknown if
+          // the second string could be an input.
+          // So the first value obtained is set aside
+          // The outer function loops to assess the
+          // second string.
+          if (i == 0)
+          {
+            tempStore = currentlyTested;
+          } else
+          {
+          */     
+            // The outer if statement checks if
+            // the string can be parsed as a double.
+            
+            // Getting to this point would mean that
+            // the second string is valid, but the index
+            // should be an integer, not a double.
+
+            // So we need to re-validate the earlier input
+            // to see if it changes if it is parsed as an int.
+
+            // Validating it first as a double is necessary, since
+            // it is unknown at that point if there is a second number.
+          if (i == 1)
+          {
+            istringstream iss(v.at(0));
+            if (!(iss >> index)) 
+            {
+                cout << "Major problem detected at line." << endl;
+                break;
+            } else
+            {
+              // Same checking to see if the length changed.
+              if (to_string(index).length() != v.at(i).length())
+              {
+                errorPresent = true;
+              }
+
+              indexPresent = true;
+            }
+          }
+        } else if (i == 0) // If the code fails to parse at the first string
+        {
+            cout << "Major problem detected at line 1." << endl;
+            break;
+        } else // If the code only fails to parse at the second string.
+        {
+            indexPresent = false;
+            break;
+        }
+      }
+      varVector.push_back(currentlyTested);
+      if (errorPresent)
+      {
+        cout << "Error detected on the first line. Approximate input used." << endl;
+      }
+    } else
+    {
+      if (!(iss >> b))
+      {
+        // If fatal parsing error happens, code skips
+        // this line and continues.
+        cout << "Error detected at line " << n+1;
+        cout << ". Skipping line." << endl;
+        continue;
+      }
+      v.clear();
+      istringstream iss(line);
+      while (getline(iss, s, ' '))
+      {
+        v.push_back(s);
+      }
+      if (to_string(b).length() != v.at(0).length())
+      {
+        // Compared to above, this is a softer error that
+        // doesn't completely stop the code.
+        cout << "Input is potentially malformed at line "
+          << n + 1 << ". Approximation used." << endl;
+      }
+
+      varVector.push_back(b);
+    }
+    n++;
+  }
+
+  if (!indexPresent)
+  {
+    index = 0;
+  }
+  cout << "I read an index of " << index <<" :D" << endl;
+  for (double i: varVector)
+    cout << i << endl;
+  return true;
 }
 
 int main(int argc, char * argv[])
@@ -198,52 +260,15 @@ int main(int argc, char * argv[])
 
     bool fileInputSuccessful = false;
 
+    filepath = "C:\\Users\\user\\engg-151\\x_rawn_with_comment.text";
+    parseFileInput(filepath);
+    /*
     while (!fileInputSuccessful)
     {
       filepath = "C:\\Users\\user\\engg-151\\x_rawn.text";
-      ifstream file(filepath.c_str());
-      
-      if (!file.good())
-      {
-        cout << "That doesn't seem to be a file..." << endl;
-        cout << "Take care not to add quotation marks"
-          << " and try again" << endl;
-        continue;
-      }
-      // cout << "Test2" << endl;
-      vector<double> signalVector;
-
-      int index;
-      double a, b;
-      double signal1, signal2;
-
-      // cout << "Test" << endl;
-      int firstLineErrors = 0;
-      bool firstLine = false;
-      bool indexPresent = false;
-      string s;
-      vector<string> v;
-
-      int i = 0;
-      int n = 0;
-      for (string line; getline(file,line); )
-      {
-        istringstream iss(line);
-        if (n == 0)
-        {
-        }
-        else
-        {
-          if (!(iss >> b))
-          {
-            cout << "Invalid data detected at line " << n + 1 << endl;
-            break;
-          }
-        }
-        cout << a << b << endl;
-        n++;
-      }
     }
+    */
+    break;
   }
 
   //return 0;
