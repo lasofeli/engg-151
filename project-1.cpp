@@ -50,7 +50,7 @@ class engg151Signal
           cout << "Appended .txt file and continuing..." << endl;
         } else
         {
-          cout << "Something seems to be wrong with: " << filepath << endl;
+          cout << "Something s  eems to be wrong with: " << filepath << endl;
           cout << "Maybe try again?" << endl;
           return false;
         }
@@ -186,11 +186,12 @@ class engg151Signal
             v.push_back(s);
           }
 
-          if (v.size() == 0)
+          if (v.size() == 0 || v.at(0) == "\t")
           {
             // If the line was empty.
             cout << "Empty line at line " << n+1;
             cout << ". Skipping..." << endl;
+            n++;
             continue;
           }
           
@@ -199,6 +200,7 @@ class engg151Signal
           {
             cout << "Major error detected at line " << n+1;
             cout << ". Skipping line." << endl;
+            n++;
             continue;
           } else if (!iss_word.eof()) 
           {
@@ -219,23 +221,43 @@ class engg151Signal
       for (int i = 0; i < varVector.size(); i++)
       {
         signalArray[i] = varVector.at(i);
+        cout << signalArray[i] << endl;
       }
-      return true;
     }
     // returns true if a valid signal was actuallly obtained from filename
     // returns false otherwise
     bool exportSignalToFile ( string filename );
     // returns true if the signal was successfully exported to a file
     // returns false otherwise
-    int start(); 
-    int end();
-    int duration();
+    int start()
+    {
+      return index;
+    } 
+    int end()
+    {
+      return index + sizeof(signalArray) - 1;
+    }
+    int duration()
+    {
+      return sizeof(signalArray);
+    }
     // as implied by the names,
     // return the start index, end index, and duration of the signal
     // respectively
-    double * data();
+    double* data()
+    {
+      return signalArray;
+    }
     // returns a pointer to an array of double containing the signal values
 };
+
+/*
+engg151Signal normalizedXCorr ( engg151Signal x, engg151Signal y)
+{
+  engg151Signal normalizedSignal;
+  
+}
+  */
 
 int main(int argc, char * argv[])
 {
