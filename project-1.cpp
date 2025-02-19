@@ -223,6 +223,7 @@ class engg151Signal
         signalArray[i] = varVector.at(i);
         cout << signalArray[i] << endl;
       }
+      return true;
     }
     // returns true if a valid signal was actuallly obtained from filename
     // returns false otherwise
@@ -270,7 +271,7 @@ int main(int argc, char * argv[])
   // For debugging
   // filepath = "C:\\Users\\user\\Downloads\\basic-test-p3-engg21-2023-0.csv";
   // cout << "Hello World!" << endl;
-  filepath = "C:\\Users\\user\\Downloads\\engg-151-main\\x_rawn_with_comment.text";
+  filepath = "C:\\Users\\user\\Downloads\\engg-151-main\\x_rawn.text";
   engg151Signal test;
 
   test.importSignalFromFile(filepath);
