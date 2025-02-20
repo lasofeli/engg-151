@@ -185,7 +185,7 @@ class engg151Signal
           {
             v.push_back(s);
           }
-
+          
           if (v.size() == 0 || v.at(0) == "\t")
           {
             // If the line was empty.
