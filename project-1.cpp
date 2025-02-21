@@ -9,7 +9,10 @@ Code is not yet formatted properly
 - the 70 char limit (idk if he still does this)
 - the use 'new' rule
 - still need to format xraw and yraw into ave data
-- revamp input parser
+- whole bunch of logging/reporting of what's happening
+  - esp. for file output processor
+- error handling for file output processor
+- code formatting
 */
 
 #include <iostream>
@@ -246,7 +249,24 @@ class engg151Signal
     }
     // returns true if a valid signal was actuallly obtained from filename
     // returns false otherwise
-    bool exportSignalToFile ( string filename );
+    bool exportSignalToFile ( string filename )
+    {
+      ofstream file(filename.c_str());
+      
+      for (int i = 0; i < length; i++)
+      {
+        if (i == 0)
+        {
+          file << index << "\t" << signalArray[i] << endl;
+        } else
+        {
+          file << signalArray[i] << endl;;
+        }
+      }
+      
+      file.close();
+      return true;
+    };
     // returns true if the signal was successfully exported to a file
     // returns false otherwise
     int start()
@@ -255,7 +275,7 @@ class engg151Signal
     } 
     int end()
     {
-      return index + length;
+      return index + length - 1;
     }
     int duration()
     {
@@ -273,15 +293,16 @@ class engg151Signal
 
 engg151Signal normalizedXCorr (engg151Signal signalX, engg151Signal signalY)
 {
-  double* correlatedSignal = new double[(signalX.start() - signalY.end()) - (signalX.end() - signalY.start())];
+  int lowerBound = signalX.start() - signalY.end();
+  int upperBound = signalX.end() - signalY.start();
+  cout << upperBound - lowerBound + 1 << endl;
+  double* correlatedSignal = new double[upperBound - lowerBound + 1];
 
   int index;
   int diff = signalX.start() - signalY.start();
-  double xSignalValue;
-  double ySignalValue;
+  
 
-  int i = 0;
-
+  
   double xx = 0;
   double yy = 0;
   for (int i = 0; i < signalX.duration(); i++)
@@ -293,28 +314,44 @@ engg151Signal normalizedXCorr (engg151Signal signalX, engg151Signal signalY)
     yy += (signalY.data())[i] * (signalY.data())[i];
   }
   // Loops through values for l
-  for (int l = signalX.end() - signalY.start(); l <= signalX.start() - signalY.end(); l++)
+
+  int i = 0;
+  double xSignalValue;
+  double ySignalValue;
+  for (int l = lowerBound; l <= upperBound; l++)
   {
     // Conducts the summing of products
     double sumproduct = 0;
-    for (int i = 0; i < max(signalX.duration(), signalY.duration()); i++)
+    
+    int lowerProductBound = min(signalX.start(), signalY.start() + l);
+    int upperProductBound = max(signalX.end(), signalY.end() + l);
+
+    for (int j = lowerProductBound;
+      j <= upperProductBound - lowerProductBound;
+      j++)
     { 
-      if (diff > 0 && i < diff)
+      xSignalValue = 0;
+      ySignalValue = 0;
+      if (j < signalX.start() || j > signalX.end())
       {
-        continue;
-      } else if (diff < 0 && i < abs(diff))
-      {
-        continue;
+        xSignalValue = 0;
       } else
       {
-        sumproduct += (signalX.data())[i] + (signalY.data())[i - l];
+        xSignalValue = (signalX.data())[j - signalX.start()];
       }
+      if (j < signalY.start() + l || j > signalY.end() + l)
+      {
+        ySignalValue = 0;
+      } else
+      {
+        ySignalValue = (signalY.data())[j - l - signalY.start()];
+      }
+      sumproduct += xSignalValue * ySignalValue;
     }
     correlatedSignal[i] = sumproduct / (sqrt(xx * yy));
     i++;
   }
-  
-  engg151Signal normalizedCorrsignal = engg151Signal(correlatedSignal, signalX.start() - signalY.end(), sizeof(correlatedSignal));
+  engg151Signal normalizedCorrsignal = engg151Signal(correlatedSignal, lowerBound, upperBound - lowerBound + 1);
   return normalizedCorrsignal;
 }
 
@@ -330,18 +367,18 @@ int main(int argc, char * argv[])
   // For debugging
   // filepath = "C:\\Users\\user\\Downloads\\basic-test-p3-engg21-2023-0.csv";
   // cout << "Hello World!" << endl;
-  filepath = "C:\\Users\\user\\Downloads\\engg-151\\luis_x.text";
+  filepath = "luis_x.text";
   engg151Signal test1, test2;
 
   test1.importSignalFromFile(filepath);
-  string filepath2 = "C:\\Users\\user\\Downloads\\engg-151\\luis_y.text";
+  string filepath2 = "luis_y.text";
   test2.importSignalFromFile(filepath2);
-  cout << "hello?";
   engg151Signal result = normalizedXCorr(test1, test2);
 
-  cout << "Your thing has an index of " << result.start() <<
+  cout << "Your results have an index of " << result.start() <<
     " and duration of " << result.duration() << " :D" << endl;
   cout << "First number is " << (result.data())[0];
   
+  result.exportSignalToFile("namaste.txt");
   //return 0;
 }
