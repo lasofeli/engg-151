@@ -13,6 +13,7 @@ Code is not yet formatted properly
   - esp. for file output processor
 - error handling for file output processor
 - code formatting
+- create automated testing script
 */
 
 #include <iostream>
