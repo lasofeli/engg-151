@@ -8,12 +8,15 @@ IMPORTANT:
 Code is not yet formatted properly
 - the 70 char limit (idk if he still does this)
 - the use 'new' rule
+- still need to format xraw and yraw into ave data
+- revamp input parser
 */
 
 #include <iostream>
 #include <vector>
 #include <string>
 #include <iomanip>
+#include <algorithm>
 #include <fstream>
 #include <sstream>
 
@@ -31,11 +34,25 @@ class engg151Signal
   */
   public:
     double* signalArray;
-    int index = 0; 
-    engg151Signal (){};
+    int index = 0;
+    int length;
+    engg151Signal() {
+      signalArray = new double[0.0];
+      index = 0;
+      length = 1;
+    }
+    engg151Signal (double arr[], int val1, int val2){
+      signalArray = new double[val2];
+      for (int i = 0 ; i < val2; i++)
+      {
+        signalArray[i] = arr[i];
+      }
+      index = val1;
+      length = val2;
+    };
     // default constructor
     // suggested default: one-element signal with value 0.0, start index 0
-    engg151Signal ( double * x, int start, int duration );
+    
     bool importSignalFromFile (string filepath)
     {
       // Needed to verify that file exists. Also tries the .txt addition.
@@ -87,7 +104,7 @@ class engg151Signal
 
           // Conversion to string is done to allow comparison
           // before and after iss.
-          while (getline(iss_line, s, ' '))
+          while (iss_line >> s)
           {
               v.push_back(s);
           }
@@ -181,9 +198,9 @@ class engg151Signal
         } else // Everything after first line
         {
           v.clear();
-          while (getline(iss_line, s, ' '))
+          while (iss_line >> s)
           {
-            v.push_back(s);
+              v.push_back(s);
           }
           
           if (v.size() == 0 || v.at(0) == "\t")
@@ -213,7 +230,6 @@ class engg151Signal
         n++;
       }
 
-
       cout << "I read a signal with an index of " << index <<
         " and duration of " << varVector.size() << " :D" << endl;
       
@@ -223,6 +239,9 @@ class engg151Signal
         signalArray[i] = varVector.at(i);
         cout << signalArray[i] << endl;
       }
+      
+
+      length = varVector.size();
       return true;
     }
     // returns true if a valid signal was actuallly obtained from filename
@@ -236,11 +255,11 @@ class engg151Signal
     } 
     int end()
     {
-      return index + sizeof(signalArray) - 1;
+      return index + length;
     }
     int duration()
     {
-      return sizeof(signalArray);
+      return length;
     }
     // as implied by the names,
     // return the start index, end index, and duration of the signal
@@ -252,13 +271,52 @@ class engg151Signal
     // returns a pointer to an array of double containing the signal values
 };
 
-/*
-engg151Signal normalizedXCorr ( engg151Signal x, engg151Signal y)
+engg151Signal normalizedXCorr (engg151Signal signalX, engg151Signal signalY)
 {
-  engg151Signal normalizedSignal;
+  double* correlatedSignal = new double[(signalX.start() - signalY.end()) - (signalX.end() - signalY.start())];
+
+  int index;
+  int diff = signalX.start() - signalY.start();
+  double xSignalValue;
+  double ySignalValue;
+
+  int i = 0;
+
+  double xx = 0;
+  double yy = 0;
+  for (int i = 0; i < signalX.duration(); i++)
+  {
+    xx += (signalX.data())[i] * (signalX.data())[i];
+  }
+  for (int i = 0; i < signalY.duration(); i++)
+  {
+    yy += (signalY.data())[i] * (signalY.data())[i];
+  }
+  // Loops through values for l
+  for (int l = signalX.end() - signalY.start(); l <= signalX.start() - signalY.end(); l++)
+  {
+    // Conducts the summing of products
+    double sumproduct = 0;
+    for (int i = 0; i < max(signalX.duration(), signalY.duration()); i++)
+    { 
+      if (diff > 0 && i < diff)
+      {
+        continue;
+      } else if (diff < 0 && i < abs(diff))
+      {
+        continue;
+      } else
+      {
+        sumproduct += (signalX.data())[i] + (signalY.data())[i - l];
+      }
+    }
+    correlatedSignal[i] = sumproduct / (sqrt(xx * yy));
+    i++;
+  }
   
+  engg151Signal normalizedCorrsignal = engg151Signal(correlatedSignal, signalX.start() - signalY.end(), sizeof(correlatedSignal));
+  return normalizedCorrsignal;
 }
-  */
 
 int main(int argc, char * argv[])
 {
@@ -268,12 +326,22 @@ int main(int argc, char * argv[])
     cout << "Argument " << i << " = " << argv[i] << endl;
   }
   string filepath;
+
   // For debugging
   // filepath = "C:\\Users\\user\\Downloads\\basic-test-p3-engg21-2023-0.csv";
   // cout << "Hello World!" << endl;
-  filepath = "C:\\Users\\user\\Downloads\\engg-151-main\\x_rawn.text";
-  engg151Signal test;
+  filepath = "C:\\Users\\user\\Downloads\\engg-151\\luis_x.text";
+  engg151Signal test1, test2;
 
-  test.importSignalFromFile(filepath);
+  test1.importSignalFromFile(filepath);
+  string filepath2 = "C:\\Users\\user\\Downloads\\engg-151\\luis_y.text";
+  test2.importSignalFromFile(filepath2);
+  cout << "hello?";
+  engg151Signal result = normalizedXCorr(test1, test2);
+
+  cout << "Your thing has an index of " << result.start() <<
+    " and duration of " << result.duration() << " :D" << endl;
+  cout << "First number is " << (result.data())[0];
+  
   //return 0;
 }
