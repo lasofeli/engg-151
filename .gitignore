@@ -33,3 +33,6 @@
 
 # Program Debug Data
 *.pdb
+
+# Python venv
+venv_tests
