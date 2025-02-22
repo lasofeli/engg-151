@@ -17,6 +17,7 @@ Code is not yet formatted properly
 */
 
 #include <iostream>
+#include <cmath>
 #include <vector>
 #include <string>
 #include <iomanip>
@@ -41,7 +42,7 @@ class engg151Signal
     int index = 0;
     int length;
     engg151Signal() {
-      signalArray = new double[0.0];
+      signalArray = new double[0];
       index = 0;
       length = 1;
     }
@@ -117,7 +118,7 @@ class engg151Signal
           // might matter, so rest is discarded.
           // Thus, loop should terminate either when it evaluates
           // two elements or if it reaches the end.
-          for (int i = 0; i < 2 || i > v.size(); i++)
+          for (int i = 0; i < 2 && i < v.size(); i++)
           {
             // Following two lines check if the string
             // currently being tested
@@ -141,9 +142,17 @@ class engg151Signal
               // At this point, it is still unknown if
               // the second string is parsable.
               // So the first value obtained is set aside.
+              // Unless there's only one value. Then, it's
+              // already stored as our first signal.
               if (i == 0)
               {
-                tempStore = currentlyTested;
+                if (v.size() == 1)
+                {
+                  varVector.push_back(currentlyTested);
+                } else
+                {
+                  tempStore = currentlyTested;
+                }
               } else
               {        
                 // The outer if statement checks if
@@ -254,18 +263,27 @@ class engg151Signal
     {
       ofstream file(filename.c_str());
       
-      for (int i = 0; i < length; i++)
+      if (!file.is_open())
       {
-        if (i == 0)
+        cout << "Output could not be written. Maybe check your inputs?" << endl;
+        return false;
+      } else
+      {
+        for (int i = 0; i < length; i++)
         {
-          file << index << "\t" << signalArray[i] << endl;
-        } else
-        {
-          file << signalArray[i] << endl;;
+          // For testing;
+          /*
+          if (i == 0)
+          {
+            file << index << "\t" << signalArray[i] << endl;
+          } else
+          */
+          {
+            file << fixed << setprecision(6) << round(signalArray[i] / 0.000001) * 0.000001 << endl;;
+          }
         }
+        file.close();
       }
-      
-      file.close();
       return true;
     };
     // returns true if the signal was successfully exported to a file
@@ -328,7 +346,7 @@ engg151Signal normalizedXCorr (engg151Signal signalX, engg151Signal signalY)
     int upperProductBound = max(signalX.end(), signalY.end() + l);
 
     for (int j = lowerProductBound;
-      j <= upperProductBound - lowerProductBound;
+      j <= upperProductBound;
       j++)
     { 
       xSignalValue = 0;
@@ -347,6 +365,7 @@ engg151Signal normalizedXCorr (engg151Signal signalX, engg151Signal signalY)
       {
         ySignalValue = (signalY.data())[j - l - signalY.start()];
       }
+      
       sumproduct += xSignalValue * ySignalValue;
     }
     correlatedSignal[i] = sumproduct / (sqrt(xx * yy));
@@ -363,23 +382,34 @@ int main(int argc, char * argv[])
   {
     cout << "Argument " << i << " = " << argv[i] << endl;
   }
-  string filepath;
+  string inputFile1, inputFile2, outputFile;
+
+  if (i > 1)
+  {
+    inputFile1 = argv[1];
+    inputFile2 = argv[2];
+    outputFile = argv[3];
+  }
+  
+  //inputFile1 = "test_set_56_1.txt";
+  //inputFile2 = "test_set_56_2.txt";
+  //outputFile = "namaste.txt";
 
   // For debugging
   // filepath = "C:\\Users\\user\\Downloads\\basic-test-p3-engg21-2023-0.csv";
   // cout << "Hello World!" << endl;
-  filepath = "luis_x.text";
-  engg151Signal test1, test2;
+  //inputFile1 = "x_rawn.text";
+  engg151Signal signal1, signal2;
 
-  test1.importSignalFromFile(filepath);
-  string filepath2 = "luis_y.text";
-  test2.importSignalFromFile(filepath2);
-  engg151Signal result = normalizedXCorr(test1, test2);
+  signal1.importSignalFromFile(inputFile1);
+  //inputFile2 = "y_rawn.text";
+  signal2.importSignalFromFile(inputFile2);
+  engg151Signal result = normalizedXCorr(signal1, signal2);
 
   cout << "Your results have an index of " << result.start() <<
     " and duration of " << result.duration() << " :D" << endl;
   cout << "First number is " << (result.data())[0];
   
-  result.exportSignalToFile("namaste.txt");
+  result.exportSignalToFile(outputFile);
   //return 0;
 }
