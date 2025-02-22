@@ -1,0 +1,11 @@
+-2.328512
+9.147211 extra_data
+-0.900427 extra_data
+-2.527503 extra_data
+8.255938 extra_data
+6.039900 extra_data
+5.237192 extra_data
+1.916289 extra_data
+0.510133 extra_data
+-2.764303 extra_data
+-7.755824 extra_data
