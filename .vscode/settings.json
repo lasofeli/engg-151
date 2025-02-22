@@ -9,6 +9,8 @@
         "utility": "cpp",
         "iterator": "cpp",
         "initializer_list": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "iomanip": "cpp",
+        "ostream": "cpp"
     }
 }
