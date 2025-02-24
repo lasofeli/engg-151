@@ -123,7 +123,7 @@ int main(int argc, char * argv[])
   
   if(result.duration() <= 20)
   {
-    cout << "The cross-correlated signal is as follows: " << endl;
+    cout << "The crosscorrelated signal is as follows: " << endl;
     result.printSignal();
   }
   cout << "Program done!" << endl;
