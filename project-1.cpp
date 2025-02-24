@@ -3,14 +3,6 @@
 // Sonon, Hugh
 // ENGG 151.01 - Project 1
 
-/*
-IMPORTANT:
-Code is not yet formatted properly
-- the use 'new' rule
-- code formatting
-- create automated testing script
-*/
-
 #include <iostream>
 #include <cmath>
 #include <vector>
