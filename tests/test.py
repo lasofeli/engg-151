@@ -23,7 +23,7 @@ test_cases = itertools.product(
 
 def generate_number_string(corruption):
     """Generate a double number with optional corruption."""
-    num = f"{random.uniform(-10, 10):.6f}"
+    num = f"{random.uniform(-1000, 1000):.6f}"
     if corruption == "letters":
         num += random.choice(["A", "B", "XYZ"])
     elif corruption == "extra_text":
@@ -100,13 +100,13 @@ for i, (first_format, length_var, int_comp, corruption, empty_lines) in enumerat
 
     # First line setup
     if first_format == "one_double":
-        first_line1 = f"{random.uniform(-10, 10):.6f}\n"
-        first_line2 = f"{random.uniform(-10, 10):.6f}\n"
+        first_line1 = f"{random.uniform(-1000, 1000):.6f}\n"
+        first_line2 = f"{random.uniform(-1000, 1000):.6f}\n"
     else:
         int1 = random.randint(-10, 10)
         int2 = random.randint(-10, 10)
-        double1 = random.uniform(-10, 10)
-        double2 = random.uniform(-10, 10)
+        double1 = random.uniform(-1000, 1000)
+        double2 = random.uniform(-1000, 1000)
 
         if int_comp == "larger":
             int1, int2 = max(int1, int2), min(int1, int2)
@@ -118,7 +118,7 @@ for i, (first_format, length_var, int_comp, corruption, empty_lines) in enumerat
         first_line1 = f"{int1} {double1:.6f}\n"
         first_line2 = f"{int2} {double2:.6f}\n"
 
-    base_length = 10
+    base_length = 1000
     if length_var == "more1":
         num_lines1, num_lines2 = base_length + 5, base_length
     elif length_var == "more2":

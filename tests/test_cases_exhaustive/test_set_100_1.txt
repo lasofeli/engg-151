@@ -1,11 +1,1001 @@
--6 8.517236
+-7 858.533052
 
--8.399205 extra_data
+657.825946 extra_data
+583.027716 extra_data
+-333.852968 extra_data
+-995.358444 extra_data
+-911.696927 extra_data
 
-9.688962 extra_data
-0.420111 extra_data
-1.949451 extra_data
-6.404575 extra_data
--1.220559 extra_data
-3.137684 extra_data
--4.279870 extra_data
+
+313.482842 extra_data
+228.895067 extra_data
+205.394945 extra_data
+-306.591698 extra_data
+
+654.461081 extra_data
+866.402142 extra_data
+521.480132 extra_data
+122.146141 extra_data
+-621.344896 extra_data
+446.008899 extra_data
+-44.190606 extra_data
+-270.677816 extra_data
+-799.642954 extra_data
+-74.462788 extra_data
+316.582980 extra_data
+472.745095 extra_data
+-585.141734 extra_data
+-398.048207 extra_data
+
+19.714799 extra_data
+-176.668984 extra_data
+-308.502551 extra_data
+387.173713 extra_data
+-910.218887 extra_data
+188.520681 extra_data
+-307.167048 extra_data
+433.981869 extra_data
+
+434.961311 extra_data
+-417.829010 extra_data
+
+581.237678 extra_data
+-831.964671 extra_data
+
+-503.578126 extra_data
+547.239592 extra_data
+
+-358.810784 extra_data
+835.446644 extra_data
+
+
+-116.685726 extra_data
+388.064815 extra_data
+734.618728 extra_data
+407.533667 extra_data
+
+450.740565 extra_data
+
+
+-670.663532 extra_data
+714.535618 extra_data
+
+
+-94.119083 extra_data
+386.732390 extra_data
+53.175612 extra_data
+-59.753786 extra_data
+-502.322015 extra_data
+
+514.326749 extra_data
+
+490.992500 extra_data
+-24.102483 extra_data
+813.256690 extra_data
+-181.518424 extra_data
+
+
+-646.684092 extra_data
+
+999.282382 extra_data
+-920.312474 extra_data
+-349.984460 extra_data
+-811.984687 extra_data
+60.612515 extra_data
+716.553169 extra_data
+-840.565896 extra_data
+-469.361209 extra_data
+-866.271628 extra_data
+
+-6.344395 extra_data
+-993.800535 extra_data
+12.282885 extra_data
+-658.399788 extra_data
+931.370732 extra_data
+-0.983779 extra_data
+635.575524 extra_data
+-554.357637 extra_data
+-136.739779 extra_data
+120.031015 extra_data
+-644.803423 extra_data
+9.648231 extra_data
+312.891742 extra_data
+806.978954 extra_data
+
+731.231539 extra_data
+-31.304120 extra_data
+
+-770.762730 extra_data
+
+133.459910 extra_data
+787.142239 extra_data
+709.984561 extra_data
+-474.191088 extra_data
+
+
+
+-108.745301 extra_data
+867.515215 extra_data
+-946.253613 extra_data
+-87.618455 extra_data
+
+-76.517440 extra_data
+
+-605.881506 extra_data
+-561.943127 extra_data
+-515.204414 extra_data
+832.034596 extra_data
+618.942501 extra_data
+
+333.481819 extra_data
+-571.730783 extra_data
+
+
+-502.255426 extra_data
+
+302.953718 extra_data
+257.633760 extra_data
+692.666561 extra_data
+-549.766386 extra_data
+-256.731393 extra_data
+-250.656822 extra_data
+-669.980556 extra_data
+727.885656 extra_data
+-655.805890 extra_data
+-906.186127 extra_data
+-534.430325 extra_data
+630.475147 extra_data
+-536.325346 extra_data
+374.636660 extra_data
+-421.808237 extra_data
+-674.467485 extra_data
+-959.778747 extra_data
+
+996.009571 extra_data
+
+-418.633758 extra_data
+5.976442 extra_data
+-46.640418 extra_data
+
+-867.218982 extra_data
+
+21.225509 extra_data
+-479.516348 extra_data
+-997.034426 extra_data
+
+588.758939 extra_data
+
+837.109978 extra_data
+-642.307020 extra_data
+-794.868733 extra_data
+
+-121.640235 extra_data
+-573.958392 extra_data
+381.601411 extra_data
+166.403862 extra_data
+-214.341722 extra_data
+-826.164892 extra_data
+-403.798035 extra_data
+-532.345530 extra_data
+
+604.758882 extra_data
+
+422.383052 extra_data
+-559.654492 extra_data
+91.355043 extra_data
+-252.340088 extra_data
+
+-623.733936 extra_data
+267.262970 extra_data
+788.340552 extra_data
+801.154789 extra_data
+942.673765 extra_data
+
+
+
+-170.475578 extra_data
+336.944301 extra_data
+-736.519283 extra_data
+472.509121 extra_data
+683.394937 extra_data
+-207.075341 extra_data
+-481.959751 extra_data
+385.590994 extra_data
+-712.303732 extra_data
+
+-644.381742 extra_data
+
+
+-931.075221 extra_data
+
+359.972135 extra_data
+667.767707 extra_data
+238.466580 extra_data
+-238.022153 extra_data
+-731.739190 extra_data
+494.525349 extra_data
+719.882611 extra_data
+771.368409 extra_data
+237.063746 extra_data
+-597.923873 extra_data
+-352.188125 extra_data
+233.990854 extra_data
+353.366054 extra_data
+
+-533.036240 extra_data
+-809.123380 extra_data
+59.687793 extra_data
+-76.061149 extra_data
+-410.053241 extra_data
+41.333938 extra_data
+791.470653 extra_data
+-703.507054 extra_data
+-532.613271 extra_data
+-236.949801 extra_data
+-398.994526 extra_data
+
+-407.138041 extra_data
+
+526.147373 extra_data
+
+234.337165 extra_data
+
+879.532523 extra_data
+860.340567 extra_data
+245.434620 extra_data
+
+-19.735302 extra_data
+-574.562687 extra_data
+-379.921198 extra_data
+
+832.054785 extra_data
+808.529311 extra_data
+748.526621 extra_data
+
+
+
+-989.743596 extra_data
+
+
+-805.070393 extra_data
+127.863598 extra_data
+348.702737 extra_data
+987.522412 extra_data
+757.277846 extra_data
+484.834444 extra_data
+484.067225 extra_data
+-182.229492 extra_data
+
+-557.048366 extra_data
+749.335711 extra_data
+198.591065 extra_data
+
+425.306872 extra_data
+755.620916 extra_data
+-436.609558 extra_data
+-63.275372 extra_data
+
+
+
+-495.775915 extra_data
+709.927416 extra_data
+-21.094891 extra_data
+242.953589 extra_data
+-154.138068 extra_data
+-859.453549 extra_data
+-93.076180 extra_data
+
+-299.391627 extra_data
+-666.554908 extra_data
+-769.060417 extra_data
+-699.936111 extra_data
+566.782082 extra_data
+
+
+-794.929424 extra_data
+299.425643 extra_data
+
+-286.444681 extra_data
+906.592133 extra_data
+-396.433819 extra_data
+
+
+
+-269.449774 extra_data
+
+-161.813446 extra_data
+976.115763 extra_data
+-617.122563 extra_data
+588.396012 extra_data
+-564.361335 extra_data
+-813.697041 extra_data
+-139.493030 extra_data
+896.137061 extra_data
+-905.037065 extra_data
+-645.357689 extra_data
+-742.568284 extra_data
+-982.486635 extra_data
+-559.511333 extra_data
+
+-924.933893 extra_data
+-390.300330 extra_data
+-692.557270 extra_data
+-819.422460 extra_data
+339.501319 extra_data
+-517.848384 extra_data
+-883.806102 extra_data
+
+
+-247.862984 extra_data
+
+
+-976.320436 extra_data
+898.196897 extra_data
+-872.256132 extra_data
+-28.520445 extra_data
+-361.454814 extra_data
+878.294959 extra_data
+
+-108.627637 extra_data
+837.242036 extra_data
+744.221447 extra_data
+
+568.932031 extra_data
+49.739988 extra_data
+848.015953 extra_data
+
+496.621144 extra_data
+-214.431526 extra_data
+655.761045 extra_data
+-502.965019 extra_data
+
+-119.813974 extra_data
+
+453.331374 extra_data
+-810.155301 extra_data
+322.947732 extra_data
+835.687245 extra_data
+-71.880618 extra_data
+-377.388119 extra_data
+49.473706 extra_data
+-188.108192 extra_data
+
+-697.991412 extra_data
+187.076934 extra_data
+-212.550450 extra_data
+-100.965931 extra_data
+326.312507 extra_data
+-240.979388 extra_data
+-532.649560 extra_data
+-130.611314 extra_data
+-192.267271 extra_data
+-426.771296 extra_data
+-87.334871 extra_data
+900.490619 extra_data
+
+-536.362338 extra_data
+
+-779.297865 extra_data
+-726.525158 extra_data
+
+894.653389 extra_data
+91.813530 extra_data
+
+562.095624 extra_data
+-264.645485 extra_data
+-382.262902 extra_data
+-75.721404 extra_data
+573.084474 extra_data
+473.435669 extra_data
+617.851335 extra_data
+
+
+182.480864 extra_data
+
+358.932361 extra_data
+228.743739 extra_data
+927.794861 extra_data
+-79.461199 extra_data
+887.298730 extra_data
+268.902359 extra_data
+-736.668176 extra_data
+
+-650.710551 extra_data
+9.121037 extra_data
+-107.483295 extra_data
+466.959121 extra_data
+-47.467241 extra_data
+4.802418 extra_data
+674.981588 extra_data
+871.296206 extra_data
+-243.981234 extra_data
+332.784530 extra_data
+
+-194.093122 extra_data
+189.823091 extra_data
+798.133594 extra_data
+
+274.335409 extra_data
+
+655.243601 extra_data
+-412.814531 extra_data
+-532.491803 extra_data
+-457.684633 extra_data
+917.624197 extra_data
+
+
+571.048975 extra_data
+765.711491 extra_data
+580.023619 extra_data
+998.843626 extra_data
+-533.805354 extra_data
+
+-955.831804 extra_data
+164.685545 extra_data
+-209.211023 extra_data
+317.950571 extra_data
+586.680760 extra_data
+864.084230 extra_data
+335.080044 extra_data
+459.274688 extra_data
+-223.451787 extra_data
+-372.168484 extra_data
+-585.251791 extra_data
+518.635284 extra_data
+-559.936024 extra_data
+967.513898 extra_data
+
+-980.162974 extra_data
+
+754.587708 extra_data
+
+855.097394 extra_data
+-946.960968 extra_data
+
+284.117683 extra_data
+754.615026 extra_data
+-465.157921 extra_data
+-744.884518 extra_data
+
+-495.544020 extra_data
+-637.047060 extra_data
+206.290003 extra_data
+-780.873981 extra_data
+791.349606 extra_data
+
+694.407709 extra_data
+692.104584 extra_data
+959.988327 extra_data
+
+
+-713.732958 extra_data
+792.958641 extra_data
+166.295617 extra_data
+-775.704712 extra_data
+295.798745 extra_data
+-438.656316 extra_data
+53.146788 extra_data
+525.921443 extra_data
+-18.407461 extra_data
+891.016535 extra_data
+
+521.203003 extra_data
+
+
+-49.246781 extra_data
+17.976080 extra_data
+-632.952304 extra_data
+196.736918 extra_data
+
+-901.630223 extra_data
+-367.959882 extra_data
+-788.552351 extra_data
+-556.284905 extra_data
+-438.887755 extra_data
+
+
+-872.416763 extra_data
+-391.713556 extra_data
+
+-831.383791 extra_data
+848.661004 extra_data
+455.395644 extra_data
+-39.625047 extra_data
+
+-648.963446 extra_data
+
+145.097275 extra_data
+336.779454 extra_data
+37.970300 extra_data
+41.023189 extra_data
+-116.185688 extra_data
+-683.582146 extra_data
+
+368.180722 extra_data
+270.217181 extra_data
+
+-772.273633 extra_data
+-526.591809 extra_data
+840.669416 extra_data
+343.592931 extra_data
+-168.477524 extra_data
+306.429670 extra_data
+
+522.359114 extra_data
+578.469412 extra_data
+820.853705 extra_data
+-861.564570 extra_data
+-426.884838 extra_data
+-85.351489 extra_data
+98.088711 extra_data
+-176.915832 extra_data
+-3.543239 extra_data
+
+722.268210 extra_data
+-440.034965 extra_data
+223.606677 extra_data
+
+
+752.633708 extra_data
+-966.227205 extra_data
+-453.944371 extra_data
+222.753399 extra_data
+
+-88.372470 extra_data
+969.175047 extra_data
+446.150910 extra_data
+
+-915.338122 extra_data
+-493.587166 extra_data
+-978.508688 extra_data
+495.698423 extra_data
+-274.749993 extra_data
+-766.337542 extra_data
+781.846937 extra_data
+-768.788818 extra_data
+-405.927182 extra_data
+-644.290521 extra_data
+568.739454 extra_data
+83.770227 extra_data
+
+527.244832 extra_data
+462.845655 extra_data
+63.889565 extra_data
+603.203805 extra_data
+294.716111 extra_data
+257.926096 extra_data
+
+119.388099 extra_data
+-156.057014 extra_data
+
+-759.983973 extra_data
+223.714405 extra_data
+-122.108918 extra_data
+
+
+-794.835927 extra_data
+
+255.907355 extra_data
+-618.780888 extra_data
+-430.690920 extra_data
+
+
+271.697997 extra_data
+-957.842063 extra_data
+-779.474184 extra_data
+10.436313 extra_data
+-434.069934 extra_data
+15.138936 extra_data
+-842.648148 extra_data
+
+542.872134 extra_data
+-764.289500 extra_data
+
+-131.100629 extra_data
+-15.391478 extra_data
+-790.614842 extra_data
+508.816556 extra_data
+737.628917 extra_data
+-720.246621 extra_data
+956.673787 extra_data
+230.862622 extra_data
+720.399280 extra_data
+
+503.401601 extra_data
+
+
+979.123250 extra_data
+
+734.596539 extra_data
+
+-682.282530 extra_data
+-103.596175 extra_data
+-495.197865 extra_data
+-96.171444 extra_data
+8.098565 extra_data
+971.827375 extra_data
+-838.834345 extra_data
+820.790535 extra_data
+45.534186 extra_data
+-674.620871 extra_data
+100.622977 extra_data
+837.146161 extra_data
+-23.401689 extra_data
+521.782314 extra_data
+92.617769 extra_data
+
+569.459219 extra_data
+-805.260718 extra_data
+
+223.680521 extra_data
+
+-147.930967 extra_data
+-984.129514 extra_data
+-12.407209 extra_data
+414.484469 extra_data
+
+920.640713 extra_data
+-998.919036 extra_data
+-64.384730 extra_data
+794.602835 extra_data
+-608.088416 extra_data
+-19.533001 extra_data
+782.032952 extra_data
+-512.662913 extra_data
+-142.883238 extra_data
+-845.578104 extra_data
+-558.690521 extra_data
+
+640.474242 extra_data
+-105.065585 extra_data
+-305.206105 extra_data
+491.253989 extra_data
+
+
+-721.321414 extra_data
+773.414954 extra_data
+-346.364387 extra_data
+
+316.393040 extra_data
+905.745555 extra_data
+-973.043752 extra_data
+-655.410479 extra_data
+
+
+
+-996.834121 extra_data
+677.909682 extra_data
+884.203180 extra_data
+414.044210 extra_data
+
+-509.176041 extra_data
+
+
+
+-590.137239 extra_data
+857.627092 extra_data
+
+-983.188192 extra_data
+
+
+700.844426 extra_data
+-710.727795 extra_data
+703.787388 extra_data
+
+-348.370666 extra_data
+938.778008 extra_data
+725.024101 extra_data
+
+-275.179385 extra_data
+
+-483.822962 extra_data
+-549.320141 extra_data
+-474.953822 extra_data
+431.310345 extra_data
+985.959583 extra_data
+-533.230663 extra_data
+-708.570290 extra_data
+-655.428292 extra_data
+755.708550 extra_data
+-132.687835 extra_data
+
+-151.819844 extra_data
+-959.507753 extra_data
+91.700997 extra_data
+776.740096 extra_data
+
+178.794401 extra_data
+-713.312793 extra_data
+-338.994374 extra_data
+825.613033 extra_data
+752.595763 extra_data
+
+230.606702 extra_data
+607.613214 extra_data
+458.317007 extra_data
+-831.239955 extra_data
+-840.419227 extra_data
+
+
+778.490328 extra_data
+
+440.296968 extra_data
+445.367631 extra_data
+
+-764.907804 extra_data
+639.654947 extra_data
+-587.718197 extra_data
+262.026139 extra_data
+
+-957.864133 extra_data
+
+-450.952616 extra_data
+636.523916 extra_data
+-831.253368 extra_data
+
+-546.863195 extra_data
+
+-384.973350 extra_data
+
+-240.523827 extra_data
+
+-438.538953 extra_data
+
+168.749297 extra_data
+750.743461 extra_data
+-471.347867 extra_data
+
+796.712808 extra_data
+
+-469.674229 extra_data
+-788.747993 extra_data
+
+-363.746521 extra_data
+653.042421 extra_data
+335.866450 extra_data
+
+495.574808 extra_data
+673.335497 extra_data
+-26.163999 extra_data
+984.112631 extra_data
+
+
+428.681110 extra_data
+
+-651.060609 extra_data
+-260.251795 extra_data
+602.059943 extra_data
+-200.258704 extra_data
+
+681.024051 extra_data
+-910.368391 extra_data
+-483.039825 extra_data
+-731.966820 extra_data
+
+826.230452 extra_data
+-207.417357 extra_data
+
+47.337840 extra_data
+-68.480247 extra_data
+
+-702.191259 extra_data
+799.398132 extra_data
+323.797682 extra_data
+-193.093825 extra_data
+30.340529 extra_data
+-393.055258 extra_data
+
+-982.089495 extra_data
+543.129164 extra_data
+614.440376 extra_data
+-844.974415 extra_data
+-278.345253 extra_data
+
+776.490577 extra_data
+
+820.780622 extra_data
+917.089396 extra_data
+-287.138854 extra_data
+933.676933 extra_data
+-998.790276 extra_data
+
+-59.701573 extra_data
+197.315627 extra_data
+876.199183 extra_data
+
+-303.436321 extra_data
+133.120422 extra_data
+710.170019 extra_data
+-913.228488 extra_data
+-568.524307 extra_data
+916.728384 extra_data
+
+-281.910937 extra_data
+
+176.823308 extra_data
+
+311.972553 extra_data
+826.573384 extra_data
+-150.187534 extra_data
+-476.461212 extra_data
+
+775.335952 extra_data
+816.617570 extra_data
+
+834.834786 extra_data
+621.637058 extra_data
+-891.592501 extra_data
+-982.346866 extra_data
+-763.085147 extra_data
+471.664180 extra_data
+
+164.663367 extra_data
+467.747092 extra_data
+
+704.525657 extra_data
+-36.268932 extra_data
+-884.098405 extra_data
+-656.601672 extra_data
+428.402019 extra_data
+-766.798846 extra_data
+930.340943 extra_data
+
+-604.611467 extra_data
+-604.320446 extra_data
+981.858528 extra_data
+
+-533.347601 extra_data
+-251.232839 extra_data
+-73.782829 extra_data
+886.614653 extra_data
+560.516872 extra_data
+-917.191041 extra_data
+-75.266287 extra_data
+-487.592258 extra_data
+
+
+-590.346179 extra_data
+926.214810 extra_data
+429.886791 extra_data
+
+
+200.538938 extra_data
+978.050996 extra_data
+-504.922982 extra_data
+-841.671852 extra_data
+
+382.350939 extra_data
+-975.457916 extra_data
+-723.158621 extra_data
+-203.163945 extra_data
+-842.677288 extra_data
+-68.916226 extra_data
+
+
+
+-842.815398 extra_data
+83.300856 extra_data
+150.852832 extra_data
+-463.780595 extra_data
+790.582026 extra_data
+874.488304 extra_data
+796.822046 extra_data
+
+981.364399 extra_data
+-641.081880 extra_data
+541.057566 extra_data
+-964.080739 extra_data
+
+-833.264770 extra_data
+-913.371384 extra_data
+-385.489531 extra_data
+-596.086119 extra_data
+-142.509635 extra_data
+443.925639 extra_data
+-372.392051 extra_data
+-106.298097 extra_data
+-809.746458 extra_data
+-669.598419 extra_data
+352.317266 extra_data
+
+-333.654211 extra_data
+772.632271 extra_data
+313.099407 extra_data
+
+-315.358826 extra_data
+-318.144778 extra_data
+-589.454898 extra_data
+392.848565 extra_data
+-840.706524 extra_data
+-598.133144 extra_data
+-90.543164 extra_data
+
+257.588299 extra_data
+571.455114 extra_data
+
+619.432308 extra_data
+-329.960199 extra_data
+958.443841 extra_data
+-456.013243 extra_data
+410.581633 extra_data
+246.474316 extra_data
+
+-605.011948 extra_data
+422.841350 extra_data
+809.619451 extra_data
+205.410354 extra_data
+
+472.624908 extra_data
+615.815994 extra_data
+511.918172 extra_data
+218.333783 extra_data
+940.105756 extra_data
+654.293488 extra_data
+
+
+
+-692.895506 extra_data
+516.247794 extra_data
+189.265120 extra_data
+
+158.842602 extra_data
+458.806314 extra_data
+-14.212505 extra_data
+
+-709.027294 extra_data
+
+-274.972567 extra_data
+-679.661718 extra_data
+438.277010 extra_data
+
+-631.663139 extra_data
+510.358944 extra_data
+339.180738 extra_data
+234.963923 extra_data
+298.854445 extra_data
+-979.439619 extra_data
+
+-529.638801 extra_data
+
+-61.854901 extra_data
+
+-899.155273 extra_data
+171.678994 extra_data
+-903.163370 extra_data
+462.244585 extra_data
+698.787162 extra_data
+-316.915633 extra_data
+-687.969275 extra_data
+-344.673114 extra_data
+-493.456936 extra_data
+862.622950 extra_data
+-652.103397 extra_data
+689.634442 extra_data
+-989.524609 extra_data
+-281.465799 extra_data
+265.974054 extra_data
+-805.005029 extra_data
+-521.996608 extra_data
+213.124172 extra_data
+-140.025086 extra_data
+109.604963 extra_data
+932.477530 extra_data
+819.129428 extra_data
+506.108083 extra_data
+884.323052 extra_data
+554.947979 extra_data
+
+387.356916 extra_data
+981.330416 extra_data
+-927.513248 extra_data
+
+-192.896377 extra_data
+620.842578 extra_data
+-551.398218 extra_data
+-636.974143 extra_data
+-519.529132 extra_data
+-882.123875 extra_data
+
+-623.070515 extra_data
+-395.333969 extra_data
+965.749168 extra_data
