@@ -311,4 +311,19 @@ class engg151Signal
     {
       return signalArray;
     }
+
+    void printSignal()
+    {
+      for (int i = 0; i < length; i++)
+      {
+        if (i == 0)
+        {
+          cout << index << "\t" << signalArray[i] << endl;
+        }
+        else
+        {
+          cout << "\t" << signalArray[i] << endl;
+        }
+      }
+    }
 };

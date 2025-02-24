@@ -120,5 +120,11 @@ int main(int argc, char * argv[])
   cout << "Crosscorrelated signal of length "
       << result.duration() << " and index " << result.start()
       << " has been written to " << outputFile << endl;
+  
+  if(result.duration() <= 20)
+  {
+    cout << "The cross-correlated signal is as follows: " << endl;
+    result.printSignal();
+  }
   cout << "Program done!" << endl;
 }
