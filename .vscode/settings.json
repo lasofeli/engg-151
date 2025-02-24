@@ -11,6 +11,7 @@
         "initializer_list": "cpp",
         "xutility": "cpp",
         "iomanip": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "algorithm": "cpp"
     }
 }
