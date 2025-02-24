@@ -81,7 +81,7 @@ int main(int argc, char * argv[])
   int i;
   string inputFile1, inputFile2, outputFile;
 
-  if (i > 1)
+  if (i == 3)
   {
     inputFile1 = argv[1];
     inputFile2 = argv[2];
