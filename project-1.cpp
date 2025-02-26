@@ -1,7 +1,10 @@
-// Mayabason, Brix
-// Tusi, Gena
-// Sonon, Hugh
-// ENGG 151.01 - Project 1
+/* 
+Mayabason, Brix
+Tusi, Gena
+Sonon, Hugh
+ENGG 151.01 - A
+Project 1: Normalized Cross-correlation
+*/
 
 #include <iostream>
 #include <cmath>
