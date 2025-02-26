@@ -37,7 +37,6 @@ engg151Signal normalizedXCorr (
   int i = 0;
   for (int l = lowerBound; l <= upperBound; l++)
   {
-    // Conducts the summing of products
     double sumproduct = 0;
     
     int lowerProductBound = min(signalX.start(), signalY.start() + l);
