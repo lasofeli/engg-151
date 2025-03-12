@@ -38,3 +38,6 @@
 # Python venv
 venv_tests
 project-1
+
+# VSCode directory
+.vscode
