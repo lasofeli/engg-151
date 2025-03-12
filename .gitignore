@@ -33,6 +33,7 @@
 
 # Program Debug Data
 *.pdb
+*.ilk
 
 # Python venv
 venv_tests
