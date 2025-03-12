@@ -22,6 +22,7 @@ TODO:
 - Input validation
 - DFT resistance to flipped start and end frequencies
 - ensure frequency calculator is resistant to non-terminating numbers (e.g., 1/3)
+- file export
 */
 
 using namespace std;
